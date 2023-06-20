@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsProject</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+   <title>MessageMe</title>
+    <%# <%= favicon_link_tag %> 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+
 
   <body>
   <div class="ui small menu">
@@ -18,6 +19,7 @@
   </div>
 </div>
 <div class="ui container">
+   <%= render 'layouts/messages' %>
     <%= yield %>
     </div>
   </body>

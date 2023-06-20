@@ -2,7 +2,7 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 require("semantic-ui")
-
+// about supported directives.
 // require rails-ujs
 //= require jquery
 //= require activestorage
@@ -10,9 +10,13 @@ require("semantic-ui")
 //= require semantic-ui
 //= require_tree .
 
-$(document).on('turbolinks:load', function(){
-    $('.ui .dropdown').dropdown();
-})
+$(document).on('turbolinks:load', function() {
+    $('.ui.dropdown').dropdown();
+    $('.message .close')
+  .on('click', function() {
+    $(this).closest('.message').transition('fade');
+  });
+  })
 
 // $(document).ready(function() {
 //     $('.ui.dropdown').dropdown();
